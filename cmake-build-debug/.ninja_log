@@ -1,0 +1,14 @@
+# ninja log v6
+31	855	7445369230714164	CMakeFiles/untitled1.dir/main.cpp.obj	cbe971de3bb89303
+33	1441	7477322376358034	CMakeFiles/Lecture.dir/Lecture.cpp.obj	32e09ca752be722c
+1152	1352	7475542551706365	Multi.exe	72a1a52437fff56f
+12	790	7472475682908959	CMakeFiles/NextOne.dir/NextOne.cpp.obj	56cb5c49ddd40cb9
+856	1093	7445369238964167	untitled1.exe	3975f507d0bba957
+39	1151	7475542540581093	CMakeFiles/Multi.dir/Multiplying.cpp.obj	ebc89a24ba5a9690
+12	1698	7424769922043888	CMakeFiles/untitled1.dir/Multiplying.cpp.obj	e5739c6d63ff17a4
+3	275	7477323780474701	build.ninja	e0d2cd9f628c81af
+10	795	7424972499347718	CMakeFiles/Multi.dir/Stresstest.cpp.obj	e6126164b5cea1e7
+7	611	7430153809057517	CMakeFiles/Stress.dir/Stresstest.cpp.obj	2f3a3c5b94a6bfc9
+611	708	7430153815097543	Stress.exe	32fb54569938124b
+790	934	7472475690688973	NextOne.exe	15643b09af7a670f
+1441	1693	7477322390436080	Lecture.exe	a6f99edba9fdfdaa
