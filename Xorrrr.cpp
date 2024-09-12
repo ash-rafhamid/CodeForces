@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+
+//Xoring Operation
 int countDifferentBits(int a, int b) {
     int xorResult = a ^ b;
 
