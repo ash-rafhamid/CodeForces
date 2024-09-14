@@ -1,46 +1,39 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
+map<string,int> scores;
+vector<pair<string,int> > v;
+int n,s,ma;
+string name;
+
 int main() {
-    int n, k;
-    cin >> n >> k;
-
-    vector<int> arr(n), time(n);
-
-    for (int i = 0; i < n; ++i) {
-        cin >> arr[i];
+    cin>>n;
+    for (int i=0 ; i<n ; i++)
+    {
+        cin>>name>>s;
+        if (scores.find(name) != scores.end())
+        {
+            scores[name]+=s;
+        }
+        else
+        {
+            scores[name]=s;
+        }
+        v.push_back(make_pair(name,scores[name]));
+    }
+    ma=INT_MIN;
+    for (map<string,int>::iterator it = scores.begin() ; it != scores.end() ; it++)
+    {
+        ma=max(ma,it->second);
     }
 
-    int initial_sum = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> time[i];
-        if (time[i] == 1) {
-            initial_sum += arr[i];
+    for (int i=0 ; i<n ; i++)
+    {
+        pair<string,int> p = v[i];
+        if (scores[p.first] == ma && p.second>=ma)
+        {
+            cout<<p.first;
+            return 0;
         }
     }
-
-    int max_additional_sum = 0;
-    int current_additional_sum = 0;
-
-    for (int i = 0; i < k; ++i) {
-        if (time[i] == 0) {
-            current_additional_sum += arr[i];
-        }
-    }
-    max_additional_sum = current_additional_sum;
-
-    for (int i = k; i < n; ++i) {
-        if (time[i - k] == 0) {
-            current_additional_sum -= arr[i - k];
-        }
-        if (time[i] == 0) {
-            current_additional_sum += arr[i];
-        }
-        max_additional_sum = max(max_additional_sum, current_additional_sum);
-    }
-
-    int result = initial_sum + max_additional_sum;
-    cout << result << endl;
-
 }
